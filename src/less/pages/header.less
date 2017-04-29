@@ -14,18 +14,7 @@
 		line-height: 1;
 		color: @titleColor;
 	}
-	/*main-header__logo
-	===============================*/
-	&__logo{
-		position: absolute;
-		top: 20px;
-		right: 10px;
-		font-size: 24px;
-		color: #716b5b;
-		span{
-			color: #a73700;
-		}
-	}
+	
 	/*menu
 	===============================*/
 	.menu-wrap{
@@ -76,6 +65,12 @@
 		input{
 			margin-right: 15px;
 			width: 230px;
+			height: 22px;
+			border: none;
+			&:focus{
+				background: lightgray;
+				outline: none;
+			}
 		}
 		.button-search{
 			width: 80px;

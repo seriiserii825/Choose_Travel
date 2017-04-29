@@ -50,6 +50,7 @@ gulp.task('js', function () {
 gulp.task('libs', function () {
     gulp.src('src/libs/**/*.*') // Выберем файлы по нужному пути
         .pipe(gulp.dest('build/libs/'))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('sprite', function () {
@@ -107,8 +108,6 @@ gulp.task('cleanmin', function (cb) {
     rimraf('src/min/min/', cb);
 });
 
-gulp.task('min', gulpSequence('cleanmin', 'mincss', 'minjs'));
-
 gulp.task('clean', function (cb) {
     rimraf('build/', cb);
 });
@@ -135,11 +134,8 @@ gulp.task('watch', function () {
     gulp.watch('src/**/*.html', ['html']);
     gulp.watch('src/less/**/*.less', ['css']);
     gulp.watch('src/js/**/*.js', ['js']);
-    gulp.watch('src/fonts/**/*.*', ['fonts']);
     gulp.watch('src/img/**/*.*', ['img']);
     gulp.watch('src/img/icons/*.*', ['sprite']);
-    gulp.watch('src/fonts/**/*.*', ['fonts']);
-    gulp.watch('src/libs/**/*.*', ['libs']);
 });
 
 

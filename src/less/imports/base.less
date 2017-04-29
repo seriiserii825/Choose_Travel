@@ -26,5 +26,41 @@ ul{
   list-style: none;
 }
 .container{
-  max-width: 1020px;
+  max-width: 1000px;
+}
+.read-more{
+  .inline-block;
+  margin-bottom: 15px;
+  text-decoration: underline;
+  color: @textColor;
+  &:hover{
+    text-decoration: none;
+  }
+}
+.tags{
+  &__list{
+    .inline-block;
+    li{
+      .inline-block;
+      a{
+        text-decoration: underline;
+        color: @titleColor;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+/*main-header__logo
+  ===============================*/
+.logo{
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  font-size: 24px;
+  color: #716b5b;
+  span{
+    color: #a73700;
+  }
 }

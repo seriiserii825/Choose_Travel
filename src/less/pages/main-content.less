@@ -1,0 +1,40 @@
+.article{
+		margin-bottom: 30px;
+		border: 1px solid @bgGray;
+		border-radius: 10px;
+		overflow: hidden;
+		&__header{
+			padding: 0 20px;
+			height: 46px;
+			background: @bgGray;
+		}	
+		&__title{
+			margin: 0;	
+			margin-right: 10px;
+			padding: 0;	
+			.inline-block;
+			a{
+				font-size: 24px;
+				font-weight: 	normal;	
+				line-height: 46px;	
+				color: @titleColor;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+		&__content{
+			padding: 20px;
+			border-top: none;
+		}
+		&__date{
+			.inline-block;
+			margin-top: 5px;
+			color: @textPurpleLight;	
+			line-height: 46px;	
+		}
+		&__img{
+			float: 	left;
+			margin-right: 20px;
+		}
+}
